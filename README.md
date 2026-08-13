@@ -127,7 +127,7 @@ Then add `portfolio.ducanh.space` in the Vercel project settings.
 
 The contact form is static and does not require a backend.
 
-When a visitor submits the form, JavaScript opens Gmail compose in a new tab with a prepared email addressed to:
+When a visitor submits the form, JavaScript redirects the current tab to Gmail compose with a prepared email addressed to:
 
 ```text
 ducanh.nguyenkl@gmail.com
