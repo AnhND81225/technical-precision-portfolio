@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AI Study Assistant - Project Detail</title>
+    <meta name="description" content="Project detail page for AI Study Assistant, a Spring Boot backend with OpenAI integration, JWT security, Cloudinary storage and CI deployment.">
+    <script>
+      const savedTheme = localStorage.getItem("portfolio-theme");
+      const systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = savedTheme || systemTheme;
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-shell nav" aria-label="Primary navigation">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">DAN</span>
+          <span>Duc Anh Nguyen</span>
+        </a>
+        <div class="nav-links">
+          <a class="active" href="./index.html#projects">Projects</a>
+          <a href="./stack-contact.html#technical-stack">Stack</a>
+          <a href="./stack-contact.html#experience">Experience</a>
+          <a href="./stack-contact.html#contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">Theme</button>
+          <a class="button ghost" href="./assets/Duc-Anh-Nguyen-CV.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="site-shell">
+      <section class="page-head reveal">
+        <p class="eyebrow">Project Detail</p>
+        <h1 class="page-title">AI Study Assistant</h1>
+        <p class="lead">A secure Spring Boot backend for homework uploads, AI feedback, response validation and study history.</p>
+        <div class="section-actions">
+          <a class="button primary" href="https://github.com/AnhND81225/ai-study-assistant-platform" target="_blank" rel="noreferrer">View Source</a>
+          <a class="button" href="https://www.ducanh.space/" target="_blank" rel="noreferrer">Live Demo</a>
+        </div>
+      </section>
+
+      <div class="split-page">
+        <div>
+          <section class="content-panel reveal">
+            <h2>The Problem</h2>
+            <p>Students need fast feedback on homework, but image uploads, AI responses, grading history and user privacy require more than a simple prompt wrapper.</p>
+            <p>The backend needed clear ownership checks, resilient OpenAI integration, consistent error mapping and API documentation for frontend collaboration.</p>
+          </section>
+
+          <section class="content-panel reveal">
+            <h2>Project Interface</h2>
+            <div class="mockup-frame">
+              <img src="./assets/project-detail/ai-learning-landing.png" alt="AI-Learning public landing page">
+            </div>
+            <p class="mono">Public landing page and authenticated product screens from AI-Learning.</p>
+          </section>
+
+          <section class="content-panel reveal">
+            <h2>Product Flow Screens</h2>
+            <div class="screen-gallery">
+              <article class="screen-card featured-screen">
+                <img src="./assets/project-detail/ai-learning-landing.png" alt="AI-Learning landing page with homework photo explanation hero">
+                <div class="screen-caption">
+                  <strong>Public Landing</strong>
+                  <span>Explains the core value: upload homework photos, receive step-by-step help and check answers.</span>
+                </div>
+              </article>
+
+              <article class="screen-card featured-screen">
+                <img src="./assets/project-detail/ai-learning-home.png" alt="AI-Learning home screen with study overview, action cards and usage limit">
+                <div class="screen-caption">
+                  <strong>Study Home</strong>
+                  <span>Entry point for solve, check, review later and saved homework workflows.</span>
+                </div>
+              </article>
+
+              <div class="screen-grid">
+                <article class="screen-card">
+                  <img src="./assets/project-detail/ai-learning-solve.png" alt="Solve homework upload screen">
+                  <div class="screen-caption">
+                    <strong>Solve Homework</strong>
+                    <span>Question upload, subject selection and guidance before AI processing.</span>
+                  </div>
+                </article>
+
+                <article class="screen-card">
+                  <img src="./assets/project-detail/ai-learning-check.png" alt="Check student work upload screen">
+                  <div class="screen-caption">
+                    <strong>Check Student Work</strong>
+                    <span>Worksheet scan flow for grading complete answers and rubrics.</span>
+                  </div>
+                </article>
+
+                <article class="screen-card">
+                  <img src="./assets/project-detail/ai-learning-history.png" alt="Saved homework history screen">
+                  <div class="screen-caption">
+                    <strong>Saved Homework</strong>
+                    <span>Search, filter and revisit solved or checked submissions.</span>
+                  </div>
+                </article>
+
+                <article class="screen-card">
+                  <img src="./assets/project-detail/ai-learning-submission-detail.png" alt="Submission detail screen with detected questions and quick answers">
+                  <div class="screen-caption">
+                    <strong>Submission Detail</strong>
+                    <span>Review detected questions, quick answers and uploaded worksheet context.</span>
+                  </div>
+                </article>
+
+                <article class="screen-card featured-screen">
+                  <img src="./assets/project-detail/ai-learning-solved-question.png" alt="Solved question detail with step by step solution and final answer">
+                  <div class="screen-caption">
+                    <strong>Solved Question</strong>
+                    <span>Step-by-step explanation stays attached to each saved question.</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="content-panel reveal">
+            <h2>The Solution</h2>
+            <p>The service uses JWT authentication with RBAC, BCrypt password hashing and ownership checks before accessing user study data.</p>
+            <p>OpenAI calls are wrapped with structured prompts, timeout handling, usage logging, response validation and predictable service-layer exceptions.</p>
+            <div class="architecture" aria-label="Architecture diagram">
+              <div class="arch-node">
+                <strong>Client</strong>
+                <span>Homework image upload and study history requests through documented REST endpoints.</span>
+              </div>
+              <div class="arch-node">
+                <strong>Spring Boot API</strong>
+                <span>Security filters, controllers, services, validation and error mapping.</span>
+              </div>
+              <div class="arch-node">
+                <strong>Data and AI</strong>
+                <span>PostgreSQL persistence, Cloudinary media storage and OpenAI response generation.</span>
+              </div>
+            </div>
+          </section>
+
+          <nav class="pager" aria-label="Project navigation">
+            <a class="button" href="./index.html#projects">Previous project</a>
+            <a class="button primary" href="./project-central-kitchen.html">Next project</a>
+          </nav>
+        </div>
+
+        <aside class="side-rail">
+          <section class="info-card reveal">
+            <h3>Technology Stack</h3>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Spring Security</span>
+              <span class="tag">JWT/RBAC</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Cloudinary</span>
+              <span class="tag">Docker</span>
+              <span class="tag">AWS EC2</span>
+              <span class="tag">GitHub Actions</span>
+              <span class="tag">Swagger/OpenAPI</span>
+            </div>
+          </section>
+
+          <section class="info-card reveal">
+            <h3>Impact Metrics</h3>
+            <div class="metric-list">
+              <div class="metric-card">
+                <strong>99.999%</strong>
+                <span class="mono">availability target</span>
+              </div>
+              <div class="metric-card">
+                <strong>0.8ms</strong>
+                <span class="mono">validation path target</span>
+              </div>
+              <div class="metric-card">
+                <strong>CI</strong>
+                <span class="mono">GitHub Actions workflow</span>
+              </div>
+              <div class="metric-card">
+                <strong>JWT</strong>
+                <span class="mono">ownership checks</span>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell footer-inner">
+        <span>Copyright 2026 Duc Anh Nguyen. Backend systems, documented precisely.</span>
+        <div class="footer-links">
+          <a href="https://github.com/AnhND81225" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/anhnd8125" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="./index.html">Home</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

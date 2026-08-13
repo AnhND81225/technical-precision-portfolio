@@ -1,0 +1,11 @@
+node_modules/
+.DS_Store
+.vercel/
+work/
+
+# IntelliJ local state
+.idea/workspace.xml
+.idea/shelf/
+.idea/httpRequests/
+.idea/dataSources/
+.idea/dataSources.local.xml

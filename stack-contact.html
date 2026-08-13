@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stack and Contact - Duc Anh Nguyen</title>
+    <meta name="description" content="Technical stack and contact page for Duc Anh Nguyen, Java Backend Software Engineer.">
+    <script>
+      const savedTheme = localStorage.getItem("portfolio-theme");
+      const systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = savedTheme || systemTheme;
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-shell nav" aria-label="Primary navigation">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">DAN</span>
+          <span>Duc Anh Nguyen</span>
+        </a>
+        <div class="nav-links">
+          <a href="./index.html#projects">Projects</a>
+          <a class="active" href="#technical-stack">Stack</a>
+          <a href="#experience">Experience</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">Theme</button>
+          <a class="button ghost" href="./assets/Duc-Anh-Nguyen-CV.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="site-shell page-head reveal">
+        <p class="eyebrow">Stack & Contact</p>
+        <h1 class="page-title">Backend skill surface, organized for action.</h1>
+        <p class="lead">A practical map of my tools, training and project collaboration channels.</p>
+      </section>
+
+      <section class="section" id="technical-stack">
+        <div class="site-shell">
+          <h2>Technical Stack</h2>
+          <p class="section-copy">Grouped by the way I build: API surfaces, domain services, persistence and delivery.</p>
+          <div class="stack-columns">
+            <article class="info-card reveal">
+              <h3>Frontend</h3>
+              <div class="tags">
+                <span class="tag">JavaScript</span>
+                <span class="tag">CSS</span>
+                <span class="tag">JSP</span>
+                <span class="tag">Swagger UI</span>
+              </div>
+              <p>Enough frontend fluency to collaborate well, wire backend contracts and ship MVC web modules.</p>
+            </article>
+            <article class="info-card reveal">
+              <h3>Backend</h3>
+              <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">REST APIs</span>
+                <span class="tag">Spring Security</span>
+                <span class="tag">JPA/Hibernate</span>
+                <span class="tag">JUnit 5</span>
+                <span class="tag">Mockito</span>
+              </div>
+              <p>Secure REST services with clean controller, service and repository boundaries.</p>
+            </article>
+            <article class="info-card reveal">
+              <h3>Tools & Ops</h3>
+              <div class="tags">
+                <span class="tag">Git</span>
+                <span class="tag">Maven</span>
+                <span class="tag">Docker</span>
+                <span class="tag">AWS EC2</span>
+                <span class="tag">GitHub Actions</span>
+                <span class="tag">Postman</span>
+                <span class="tag">OpenAPI</span>
+              </div>
+              <p>Documented APIs, deployable builds and reproducible team workflows.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="experience">
+        <div class="site-shell">
+          <h2>Experience Signals</h2>
+          <p class="section-copy">A compact read on education, certifications and the working style behind the projects.</p>
+          <div class="project-grid">
+            <article class="info-card reveal">
+              <h3>Software Engineering Student</h3>
+              <p>FPT University, HCM Campus. Expected graduation in 2027 with a backend focus and 3.0/4.0 GPA.</p>
+              <div class="tags">
+                <span class="tag">OOP</span>
+                <span class="tag">Data Structures</span>
+                <span class="tag">Algorithms</span>
+                <span class="tag">Problem Solving</span>
+              </div>
+            </article>
+            <article class="info-card reveal">
+              <h3>Certifications & Training</h3>
+              <p>IBM Java Developer, FCJ Workforce Program, AWS Cloud Training, Java Programming Fundamentals and IELTS Academic 5.5.</p>
+              <div class="tags">
+                <span class="tag">Java</span>
+                <span class="tag">AWS</span>
+                <span class="tag">Teamwork</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="certifications">
+        <div class="site-shell">
+          <h2>Certification Detail</h2>
+          <p class="section-copy">Training signals from my CV, organized so recruiters can scan issuer, focus and evidence path quickly.</p>
+          <div class="cert-grid">
+            <article class="cert-card reveal">
+              <div class="cert-head">
+                <span class="cert-icon">IBM</span>
+                <span class="tag">2025</span>
+              </div>
+              <h3>IBM Java Developer</h3>
+              <p>Java backend foundations, object-oriented programming and software engineering practice.</p>
+              <div class="cert-meta">
+                <span>Issuer</span>
+                <strong>IBM</strong>
+                <span>Focus</span>
+                <strong>Java development</strong>
+              </div>
+              <a class="inline-link" href="https://www.linkedin.com/in/anhnd8125" target="_blank" rel="noreferrer">View on LinkedIn</a>
+            </article>
+
+            <article class="cert-card reveal">
+              <div class="cert-head">
+                <span class="cert-icon">AWS</span>
+                <span class="tag">2026</span>
+              </div>
+              <h3>FCJ Workforce Program</h3>
+              <p>AWS cloud training with practical exposure to cloud fundamentals and deployment concepts.</p>
+              <div class="cert-meta">
+                <span>Issuer</span>
+                <strong>FCJ / AWS Training</strong>
+                <span>Focus</span>
+                <strong>Cloud fundamentals</strong>
+              </div>
+              <a class="inline-link" href="https://www.linkedin.com/in/anhnd8125" target="_blank" rel="noreferrer">View on LinkedIn</a>
+            </article>
+
+            <article class="cert-card reveal">
+              <div class="cert-head">
+                <span class="cert-icon">JPF</span>
+                <span class="tag">2025</span>
+              </div>
+              <h3>Java Programming Fundamentals</h3>
+              <p>Core Java syntax, programming logic, data handling and problem-solving basics.</p>
+              <div class="cert-meta">
+                <span>Credential</span>
+                <strong>Training certificate</strong>
+                <span>Focus</span>
+                <strong>Java fundamentals</strong>
+              </div>
+              <a class="inline-link" href="https://www.linkedin.com/in/anhnd8125" target="_blank" rel="noreferrer">View on LinkedIn</a>
+            </article>
+
+            <article class="cert-card reveal">
+              <div class="cert-head">
+                <span class="cert-icon">IELTS</span>
+                <span class="tag">2024</span>
+              </div>
+              <h3>IELTS Academic 5.5</h3>
+              <p>English communication credential supporting team collaboration, documentation and technical reading.</p>
+              <div class="cert-meta">
+                <span>Credential</span>
+                <strong>IELTS Academic</strong>
+                <span>Score</span>
+                <strong>5.5</strong>
+              </div>
+              <a class="inline-link" href="https://www.linkedin.com/in/anhnd8125" target="_blank" rel="noreferrer">View on LinkedIn</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <div class="site-shell">
+          <h2>Initiate Contact</h2>
+          <p class="section-copy">Send a project note, review my repositories or connect through a professional network.</p>
+          <div class="contact-layout">
+            <div class="quick-links">
+              <a class="contact-card reveal" href="https://github.com/AnhND81225" target="_blank" rel="noreferrer">
+                <img src="https://cdn.simpleicons.org/github/58a6ff" alt="GitHub icon">
+                <h3>GitHub Profile</h3>
+                <p>Browse repositories, backend projects and source history.</p>
+                <span class="inline-link">github.com/AnhND81225</span>
+              </a>
+              <a class="contact-card reveal" href="mailto:ducanh.nguyenkl@gmail.com">
+                <img src="https://cdn.simpleicons.org/gmail/58a6ff" alt="Email icon">
+                <h3>Email Channel</h3>
+                <p>Use direct email for project collaboration, internship roles or backend discussions.</p>
+                <span class="inline-link">ducanh.nguyenkl@gmail.com</span>
+              </a>
+              <a class="contact-card reveal" href="https://www.linkedin.com/in/anhnd8125" target="_blank" rel="noreferrer">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn icon">
+                <h3>LinkedIn Network</h3>
+                <p>Connect professionally through my verified LinkedIn profile.</p>
+                <span class="inline-link">linkedin.com/in/anhnd8125</span>
+              </a>
+            </div>
+
+            <section class="contact-card reveal" aria-label="Contact form">
+              <h3>Contact Form</h3>
+              <p class="mono">terminal-ready payload</p>
+              <form class="contact-form" data-contact-form>
+                <div class="field">
+                  <label for="name">Name</label>
+                  <input id="name" name="name" autocomplete="name" placeholder="Your name">
+                </div>
+                <div class="field">
+                  <label for="email">Email</label>
+                  <input id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+                </div>
+                <div class="field">
+                  <label for="message">Message</label>
+                  <textarea id="message" name="message" rows="6" placeholder="Project context, role details or collaboration notes"></textarea>
+                </div>
+                <button class="button primary" type="submit">Transmit Message</button>
+                <div class="form-status" data-form-status aria-live="polite"></div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell footer-inner">
+        <span>Copyright 2026 Duc Anh Nguyen. Secure APIs, clean handoffs.</span>
+        <div class="footer-links">
+          <a href="https://github.com/AnhND81225" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/anhnd8125" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/AnhND81225" target="_blank" rel="noreferrer">Source Code</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

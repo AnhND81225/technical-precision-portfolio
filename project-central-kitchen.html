@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Central Kitchen System - Project Detail</title>
+    <meta name="description" content="Project detail page for Franchise and Central Kitchen Management System, a Spring Boot backend for orders, supply workflows, menus and store operations.">
+    <script>
+      const savedTheme = localStorage.getItem("portfolio-theme");
+      const systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = savedTheme || systemTheme;
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-shell nav" aria-label="Primary navigation">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">DAN</span>
+          <span>Duc Anh Nguyen</span>
+        </a>
+        <div class="nav-links">
+          <a class="active" href="./index.html#projects">Projects</a>
+          <a href="./stack-contact.html#technical-stack">Stack</a>
+          <a href="./stack-contact.html#experience">Experience</a>
+          <a href="./stack-contact.html#contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">Theme</button>
+          <a class="button ghost" href="./assets/Duc-Anh-Nguyen-CV.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="site-shell">
+      <section class="page-head reveal">
+        <p class="eyebrow">Project Detail</p>
+        <h1 class="page-title">Central Kitchen System</h1>
+        <p class="lead">Backend APIs for franchise ordering, food production, supply requests and store operations.</p>
+        <div class="section-actions">
+          <a class="button primary" href="https://github.com/AnhND81225/central-kitchen-franchise-management-backend" target="_blank" rel="noreferrer">View Source</a>
+          <a class="button" href="./index.html#projects">Live Demo</a>
+        </div>
+      </section>
+
+      <div class="split-page">
+        <div>
+          <section class="content-panel reveal">
+            <h2>The Problem</h2>
+            <p>Franchise stores and central kitchens need coordinated ordering, supply visibility and operational status updates across multiple roles.</p>
+            <p>The backend needed stable modules for production workflows, order tracking, issue handling and API contracts for frontend integration.</p>
+          </section>
+
+          <section class="content-panel reveal">
+            <h2>Project Interface</h2>
+            <div class="mockup-frame">
+              <img class="fit-contain" src="./assets/central-kitchen/central-kitchen-menu.jpg" alt="Central Kitchen menu management screen">
+            </div>
+            <p class="mono">Frames extracted from the Central Kitchen product walkthrough video.</p>
+          </section>
+
+          <section class="content-panel reveal">
+            <h2>Operational Screens</h2>
+            <div class="screen-gallery">
+              <article class="screen-card featured-screen">
+                <img src="./assets/central-kitchen/central-kitchen-menu.jpg" alt="Central Kitchen menu management screen">
+                <div class="screen-caption">
+                  <strong>Menu Management</strong>
+                  <span>Prepared food and raw ingredient views for franchise ordering.</span>
+                </div>
+              </article>
+
+              <div class="screen-grid">
+                <article class="screen-card">
+                  <img src="./assets/central-kitchen/central-kitchen-order-tracking.jpg" alt="Order tracking screen with delivery states">
+                  <div class="screen-caption">
+                    <strong>Order Tracking</strong>
+                    <span>Store staff can review pending, delivered and in-progress orders.</span>
+                  </div>
+                </article>
+
+                <article class="screen-card">
+                  <img src="./assets/central-kitchen/central-kitchen-order-detail.jpg" alt="Order detail modal with item quantities">
+                  <div class="screen-caption">
+                    <strong>Order Detail</strong>
+                    <span>Modal view for validating item quantities before status changes.</span>
+                  </div>
+                </article>
+
+                <article class="screen-card">
+                  <img src="./assets/central-kitchen/central-kitchen-supply-list.jpg" alt="Supply request list screen">
+                  <div class="screen-caption">
+                    <strong>Supply Requests</strong>
+                    <span>Central kitchen can monitor request status, amounts and sources.</span>
+                  </div>
+                </article>
+
+                <article class="screen-card">
+                  <img src="./assets/central-kitchen/central-kitchen-create-supply.jpg" alt="Create supply request modal">
+                  <div class="screen-caption">
+                    <strong>Create Supply Request</strong>
+                    <span>Store workflow for requesting stock with delivery dates and notes.</span>
+                  </div>
+                </article>
+
+                <article class="screen-card featured-screen">
+                  <img src="./assets/central-kitchen/central-kitchen-stock.jpg" alt="Stock and inventory summary screen">
+                  <div class="screen-caption">
+                    <strong>Stock Visibility</strong>
+                    <span>Inventory summary for supply planning and daily kitchen operations.</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="content-panel reveal">
+            <h2>The Solution</h2>
+            <p>The backend groups workflows into controller, service and repository modules, with documented REST APIs for frontend collaboration.</p>
+            <p>JPA/Hibernate and PostgreSQL handle relational persistence while Swagger/OpenAPI keeps endpoint contracts visible to the team.</p>
+            <div class="architecture" aria-label="Architecture diagram">
+              <div class="arch-node">
+                <strong>Store Portal</strong>
+                <span>Menu browsing, order creation, status tracking and issue reporting.</span>
+              </div>
+              <div class="arch-node">
+                <strong>Spring Boot API</strong>
+                <span>Order, supply, production and store operation modules.</span>
+              </div>
+              <div class="arch-node">
+                <strong>Data Layer</strong>
+                <span>PostgreSQL persistence through JPA/Hibernate repositories.</span>
+              </div>
+            </div>
+          </section>
+
+          <nav class="pager" aria-label="Project navigation">
+            <a class="button" href="./project-ai-study-assistant.html">Previous project</a>
+            <a class="button primary" href="./stack-contact.html">Next project</a>
+          </nav>
+        </div>
+
+        <aside class="side-rail">
+          <section class="info-card reveal">
+            <h3>Technology Stack</h3>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">Spring Boot</span>
+              <span class="tag">Spring Security</span>
+              <span class="tag">JPA/Hibernate</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Postman</span>
+              <span class="tag">Swagger/OpenAPI</span>
+              <span class="tag">Railway</span>
+              <span class="tag">Supabase</span>
+            </div>
+          </section>
+
+          <section class="info-card reveal">
+            <h3>Impact Metrics</h3>
+            <div class="metric-list">
+              <div class="metric-card">
+                <strong>10+</strong>
+                <span class="mono">REST APIs built</span>
+              </div>
+              <div class="metric-card">
+                <strong>5</strong>
+                <span class="mono">team members</span>
+              </div>
+              <div class="metric-card">
+                <strong>3</strong>
+                <span class="mono">workflow domains</span>
+              </div>
+              <div class="metric-card">
+                <strong>API</strong>
+                <span class="mono">Swagger documented</span>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell footer-inner">
+        <span>Copyright 2026 Duc Anh Nguyen. Franchise operations, documented precisely.</span>
+        <div class="footer-links">
+          <a href="https://github.com/AnhND81225" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/anhnd8125" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="./index.html">Home</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
