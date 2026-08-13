@@ -253,6 +253,18 @@ textarea {
   background: transparent;
 }
 
+.button.disabled {
+  cursor: not-allowed;
+  border-style: dashed;
+  color: var(--quiet);
+  background: var(--panel-2);
+}
+
+.button.disabled:hover {
+  border-color: var(--line);
+  background: var(--panel-2);
+}
+
 .theme-toggle {
   display: inline-flex;
   min-height: 42px;

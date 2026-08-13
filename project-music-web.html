@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Music Web - Project Detail</title>
+    <meta name="description" content="Project detail page for Music Web, a Servlet, JSP and SQL Server music platform running locally with songs, albums, artists, playlists and account workflows.">
+    <script>
+      const savedTheme = localStorage.getItem("portfolio-theme");
+      const systemTheme = window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+      document.documentElement.dataset.theme = savedTheme || systemTheme;
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="site-shell nav" aria-label="Primary navigation">
+        <a class="brand" href="./index.html">
+          <span class="brand-mark">DAN</span>
+          <span>Duc Anh Nguyen</span>
+        </a>
+        <div class="nav-links">
+          <a class="active" href="./index.html#projects">Projects</a>
+          <a href="./stack-contact.html#technical-stack">Stack</a>
+          <a href="./stack-contact.html#experience">Experience</a>
+          <a href="./stack-contact.html#contact">Contact</a>
+        </div>
+        <div class="nav-actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch color theme">Theme</button>
+          <a class="button ghost" href="./assets/Duc-Anh-Nguyen-CV.pdf" target="_blank" rel="noreferrer">Resume</a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="site-shell">
+      <section class="page-head reveal">
+        <p class="eyebrow">Project Detail</p>
+        <h1 class="page-title">Music Web</h1>
+        <p class="lead">A localhost music platform built with Servlet, JSP and SQL Server for catalog browsing, playlists, listening history and admin management.</p>
+        <div class="section-actions">
+          <a class="button primary" href="https://github.com/AnhND81225/MusicWeb_Severlet_JSP" target="_blank" rel="noreferrer">View Source</a>
+          <span class="button disabled" aria-disabled="true">Localhost only</span>
+        </div>
+      </section>
+
+      <div class="split-page">
+        <div>
+          <section class="content-panel reveal">
+            <h2>The Problem</h2>
+            <p>A music application needs more than a list of tracks. Users expect browsing, playback context, playlists, liked songs, artist pages and account-specific history.</p>
+            <p>The project also needed an admin surface for managing songs, albums and artists while keeping the classic Java web stack organized around MVC boundaries.</p>
+          </section>
+
+          <section class="content-panel reveal">
+            <h2>Project Interface</h2>
+            <div class="mockup-frame">
+              <img src="./assets/music-web/music-web-songs.png" alt="Music Web songs dashboard with navigation, track list and notifications">
+            </div>
+            <p class="mono">Screens captured from the localhost Music Web application, so this project has no public live demo.</p>
+          </section>
+
+          <section class="content-panel reveal">
+            <h2>Product Screens</h2>
+            <div class="screen-gallery">
+              <article class="screen-card featured-screen">
+                <img src="./assets/music-web/music-web-songs.png" alt="Music Web all songs dashboard">
+                <div class="screen-caption">
+                  <strong>Song Dashboard</strong>
+                  <span>Track list, search, quick actions, notifications and listening spotlight in one focused screen.</span>
+                </div>
+              </article>
+
+              <article class="screen-card featured-screen">
+                <img src="./assets/music-web/music-web-track-detail.png" alt="Music Web track detail with audio player and comments">
+                <div class="screen-caption">
+                  <strong>Track Detail</strong>
+                  <span>Audio playback, song metadata, like action and comment workflow for a selected track.</span>
+                </div>
+              </article>
+
+              <div class="screen-grid">
+                <article class="screen-card">
+                  <img src="./assets/music-web/music-web-playlists.png" alt="Music Web playlist management page">
+                  <div class="screen-caption">
+                    <strong>Playlist Management</strong>
+                    <span>Create playlists, open collections, add songs and manage hidden or favorite states.</span>
+                  </div>
+                </article>
+
+                <article class="screen-card">
+                  <img src="./assets/music-web/music-web-artists.png" alt="Music Web artist catalog page">
+                  <div class="screen-caption">
+                    <strong>Artist Catalog</strong>
+                    <span>Search and browse artists with profile cards, follower counts and admin controls.</span>
+                  </div>
+                </article>
+
+                <article class="screen-card featured-screen">
+                  <img src="./assets/music-web/music-web-albums.png" alt="Music Web album catalog page">
+                  <div class="screen-caption">
+                    <strong>Album Catalog</strong>
+                    <span>Album cards highlight cover artwork, genre, release date and associated artist metadata.</span>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+
+          <section class="content-panel reveal">
+            <h2>The Solution</h2>
+            <p>The app follows a Java MVC structure with Servlets handling routing, JSP pages rendering views and DAO/service layers coordinating SQL Server persistence.</p>
+            <p>Core modules cover song catalog management, playlists, artists, albums, authentication, role-based admin workflows and local playback pages.</p>
+            <div class="architecture" aria-label="Architecture diagram">
+              <div class="arch-node">
+                <strong>JSP Views</strong>
+                <span>Dark music interface for songs, playlists, albums, artists and track detail screens.</span>
+              </div>
+              <div class="arch-node">
+                <strong>Servlet Controllers</strong>
+                <span>Request routing, form handling, session checks and admin/user action dispatching.</span>
+              </div>
+              <div class="arch-node">
+                <strong>SQL Server</strong>
+                <span>Relational storage for accounts, songs, albums, artists, playlists and user activity.</span>
+              </div>
+            </div>
+          </section>
+
+          <nav class="pager" aria-label="Project navigation">
+            <a class="button" href="./project-central-kitchen.html">Previous project</a>
+            <a class="button primary" href="./stack-contact.html">Next project</a>
+          </nav>
+        </div>
+
+        <aside class="side-rail">
+          <section class="info-card reveal">
+            <h3>Technology Stack</h3>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">Servlet</span>
+              <span class="tag">JSP</span>
+              <span class="tag">JSTL</span>
+              <span class="tag">SQL Server</span>
+              <span class="tag">JDBC</span>
+              <span class="tag">MVC</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">Apache Tomcat</span>
+            </div>
+          </section>
+
+          <section class="info-card reveal">
+            <h3>Impact Metrics</h3>
+            <div class="metric-list">
+              <div class="metric-card">
+                <strong>12</strong>
+                <span class="mono">sample tracks</span>
+              </div>
+              <div class="metric-card">
+                <strong>6</strong>
+                <span class="mono">artist profiles</span>
+              </div>
+              <div class="metric-card">
+                <strong>6</strong>
+                <span class="mono">album records</span>
+              </div>
+              <div class="metric-card">
+                <strong>Local</strong>
+                <span class="mono">Tomcat runtime</span>
+              </div>
+            </div>
+          </section>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-shell footer-inner">
+        <span>Copyright 2026 Duc Anh Nguyen. Music workflows, documented precisely.</span>
+        <div class="footer-links">
+          <a href="https://github.com/AnhND81225" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.linkedin.com/in/anhnd8125" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="./index.html">Home</a>
+        </div>
+      </div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
