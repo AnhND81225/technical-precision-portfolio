@@ -25,7 +25,7 @@ Technical Precision portfolio for Duc Anh Nguyen, a Java Backend Developer focus
 - Featured project pages with real product screenshots.
 - Technology logo conveyor for backend, testing and operations tools.
 - Certification detail section.
-- Static contact form using `mailto`.
+- Static contact form that opens Gmail compose with a prepared message.
 - Vercel-ready routing with clean URLs.
 
 ## Project Structure
@@ -127,13 +127,13 @@ Then add `portfolio.ducanh.space` in the Vercel project settings.
 
 The contact form is static and does not require a backend.
 
-When a visitor submits the form, JavaScript opens the visitor's mail app with a prepared email addressed to:
+When a visitor submits the form, JavaScript opens Gmail compose in a new tab with a prepared email addressed to:
 
 ```text
 ducanh.nguyenkl@gmail.com
 ```
 
-For a production form that submits directly on the website, connect a service such as Formspree, Netlify Forms, Resend or a custom Spring Boot contact API.
+Visitors need to be signed in to Gmail to send the prepared message. For a production form that submits directly on the website, connect a service such as Formspree, Netlify Forms, Resend or a custom Spring Boot contact API.
 
 ## Links
 

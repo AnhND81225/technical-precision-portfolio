@@ -57,8 +57,9 @@ if (form && status) {
 
     const subject = encodeURIComponent(`Portfolio contact from ${name}`);
     const body = encodeURIComponent(`${message}\n\nReply to: ${email}`);
-    window.location.href = `mailto:ducanh.nguyenkl@gmail.com?subject=${subject}&body=${body}`;
-    status.textContent = "Mail client opened. Message payload prepared.";
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=ducanh.nguyenkl@gmail.com&su=${subject}&body=${body}`;
+    window.open(gmailUrl, "_blank", "noopener,noreferrer");
+    status.textContent = "Gmail compose opened. Message payload prepared.";
     status.style.color = "#63d297";
   });
 }
