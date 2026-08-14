@@ -1,5 +1,6 @@
 const revealItems = document.querySelectorAll(".reveal");
 const themeToggle = document.querySelector("[data-theme-toggle]");
+const logoRails = document.querySelectorAll(".logo-rail");
 
 function setTheme(theme) {
   document.documentElement.dataset.theme = theme;
@@ -18,6 +19,22 @@ if (themeToggle) {
     const nextTheme = document.documentElement.dataset.theme === "dark" ? "light" : "dark";
     setTheme(nextTheme);
   });
+}
+
+function updateLogoRails() {
+  logoRails.forEach((rail) => {
+    const track = rail.querySelector(".logo-track");
+    if (!track) return;
+
+    const paddingBuffer = 36;
+    const shift = Math.max(0, track.scrollWidth - rail.clientWidth + paddingBuffer);
+    track.style.setProperty("--conveyor-shift", `${shift}px`);
+  });
+}
+
+if (logoRails.length) {
+  updateLogoRails();
+  window.addEventListener("resize", updateLogoRails);
 }
 
 if ("IntersectionObserver" in window) {

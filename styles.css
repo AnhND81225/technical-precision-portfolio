@@ -483,12 +483,12 @@ textarea {
   width: max-content;
   gap: 10px;
   padding: 12px 18px;
-  animation: conveyor-left 34s linear infinite;
+  animation: conveyor-left 22s ease-in-out infinite alternate;
 }
 
 .logo-rail.reverse .logo-track {
   animation-name: conveyor-right;
-  animation-duration: 42s;
+  animation-duration: 26s;
 }
 
 .tech-logo {
@@ -551,13 +551,13 @@ textarea {
   }
 
   to {
-    transform: translateX(-50%);
+    transform: translateX(calc(-1 * var(--conveyor-shift, 0px)));
   }
 }
 
 @keyframes conveyor-right {
   from {
-    transform: translateX(-50%);
+    transform: translateX(calc(-1 * var(--conveyor-shift, 0px)));
   }
 
   to {
