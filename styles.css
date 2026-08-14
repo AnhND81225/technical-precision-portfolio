@@ -367,6 +367,7 @@ textarea {
 }
 
 .focus-strip span {
+  flex: 0 1 132px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 7px 9px;
@@ -483,12 +484,12 @@ textarea {
   width: max-content;
   gap: 10px;
   padding: 12px 18px;
-  animation: conveyor-left 22s ease-in-out infinite alternate;
+  animation: conveyor-left 34s ease-in-out infinite alternate;
 }
 
 .logo-rail.reverse .logo-track {
   animation-name: conveyor-right;
-  animation-duration: 26s;
+  animation-duration: 24s;
 }
 
 .tech-logo {
